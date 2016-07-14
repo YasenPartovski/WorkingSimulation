@@ -5,8 +5,8 @@ public class Task {
 	private int workingHours;
 	
 	// К-ри:	
-	Task (String name, int workingHours) { //използва Setter-ите
-		this.setName(name); 
+	Task (String name, int workingHours) { // Uses the Setters
+		this.setName(name);
 		this.setWorkingHours(workingHours);
 	}
 	
@@ -21,7 +21,7 @@ public class Task {
 		return this.name;
 	}
 	
-	public void setWorkingHours (int newWorkingHours) {
+	void setWorkingHours (final int newWorkingHours) {
 		if (newWorkingHours>=0) {
 			this.workingHours=newWorkingHours;
 		}

@@ -18,19 +18,19 @@ public class AllWork {
 	}
 	
 	// Methods:
-	void addTask(Task task) { // Adds a new Task to the array of Tasks
+	public void addTask(Task task) { // Adds a new Task to the array of Tasks
 		if (freePlacesForTasks>0) { // If there is an available empty element in the array
 			for (int i=0; i<this.tasks.length; i++) {
 				if (this.tasks[i]==null) { // If the element is null
 					this.tasks[i]=task; // The new Task is assigned to the first available element in the array
 					this.freePlacesForTasks--; // The available places for new Tasks is reduced by 1
-					break; // Beaks the iterations
+					break; // Breaks the loop
 				}
 			}
 		}
 	}
 	
-	Task getNextTask() { // Returns the next available Task in the array 
+	Task getNextTask() { // Returns the next available Task in the array
 		int tempFreeTaskIndex=this.currentUnassignedTask; // The tempIndex stores the current available task's index in the array
 		if (this.currentUnassignedTask<tasks.length-1 && this.currentUnassignedTask>-1) { // If the last free Task is NOT the last one in the array
 			this.currentUnassignedTask++; // The index points to the next available Task
@@ -55,5 +55,4 @@ public class AllWork {
 		}
 		return true; // If the array is empty or all the Tasks are finished - All the work is done
 	}
-	
 }

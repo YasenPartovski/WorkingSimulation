@@ -29,9 +29,6 @@ public class WorkDemo {
 		
 		// Assigning all the employees to the same Working Tasks Sheet:
 		employee1.setAllwork(workTasks);
-		employee2.setAllwork(workTasks);
-		employee3.setAllwork(workTasks);
-		employee4.setAllwork(workTasks);
 		
 		// Making an array of employees:
 		Employee[] employees = new Employee[4];
